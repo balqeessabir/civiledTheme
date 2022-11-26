@@ -32,6 +32,7 @@ h1, h2, h3, h1 span, h2 span, h3 span, .nav-item {
     padding-top: $content-padding-top;
     padding-bottom: $content-padding-bottom;
     margin-top: $header-height;
+    padding-left: 20px;
   }
   min-height: calc(100vh - #{$header-height + $content-padding-top + $content-padding-bottom + $footer-height}); // sticky footer
 }
@@ -111,7 +112,7 @@ header.global-header .nav-links .secondary .dropdown-user-menu {
 .home .courses-container .courses .courses-listing {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   .courses-listing-item {
     margin: 0 20px 30px 20px;
     // Fix right margin
@@ -120,16 +121,20 @@ header.global-header .nav-links .secondary .dropdown-user-menu {
     }
   }
 }
-
+.action .action-primary .action-update .js-login .login-button{
+  background-color: #ff7518 !important;
+}
 .courses-container .courses .course{
   border-bottom: solid 3px #ff7518;
   box-shadow: none !important;
   border-radius: 5px;
 }
 
-.courses-container .courses .course .course-image .cover-image {
-border-radius: 5px 5px 0 0 !important;
+.courses-container .courses .course .course-image .cover-image::before{
+  border-radius: 5px 5px 0 0;
 }
+
+
 .highlighted-courses .courses .course,
 .find-courses .courses .course {
   border:none !important;
@@ -175,7 +180,7 @@ nav.wrapper-preview-menu {
     }
     strong {
       background-image: none;
-      border-radius: 0;
+      border-radius: 5px;
       &:hover:not(:disabled) {
         background-image: none;
       }
@@ -209,6 +214,13 @@ nav.wrapper-preview-menu {
 .wrapper-account-settings .wrapper-header .header-title {
   padding-top: 0;
 }
+.button-secondary-login {
+  border-radius: 5px;
+}
+
+ .js-login .login-button{
+  background-color: $primary !important;
+}
 .wrapper-account-settings .wrapper-header .account-nav button.active {
   border-bottom-color: $primary;
 }
@@ -217,7 +229,8 @@ nav.wrapper-preview-menu {
   background-color: $primary;
   color: $white;
   text-align: center;
-  width: 100% !important;
+  width: 100vw;
+  border-radius: 5px;
 }
 
 .search_bar {
@@ -262,11 +275,12 @@ nav.wrapper-preview-menu {
     .card_header {
       position: relative;
       height: 200px;
+      border-radius: $border-radius;
       overflow: hidden;
 
       img {
         width: 100%;
-        border-radius: $border-radius $border-radius 0 0;
+        border-radius: $border-radius $border-radius 0 0 !important;
       }
 
       .icon {
@@ -334,3 +348,27 @@ nav.wrapper-preview-menu {
 }
 
 
+.btn-blue, .account-settings-sections .section .account-deletion-details .paragon__modal-open .paragon__btn :not(.cancel-btn), .account-settings-message .alert-message .alert-actions .btn-alert-primary , .login-register .action-primary, .financial-assistance-wrapper .financial-assistance-form .action-primary, .verification-process .action-primary-blue, .verification-process .carousel .wrapper-task .controls .control .action, .verification-process .carousel .wrapper-task .controls .control .entitlement-actions-wrapper .entitlement-action, .entitlement-actions-wrapper .verification-process .carousel .wrapper-task .controls .control .entitlement-action, .verification-process .carousel .wrapper-task .msg .list-actions .action-retakephotos a, .verification-process .carousel #wrapper-review .review-task-name .list-actions .action-editname a, .verification-process.step-select-track .register-choice-audit .action-select input, .verification-process.step-confirmation .course-info .options .action-course, .verification-process.step-confirmation .course-info .course-actions .action-dashboard, .reverify-blocked .action-primary, .wrapper-authorize .btn-authorization-allow, .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .btn-change-privacy, .btn-blue:active, .account-settings-sections .section .account-deletion-details .paragon__modal-open .paragon__btn:active:not(.cancel-btn), .account-settings-message .alert-message .alert-actions .btn-alert-primary:active, .login-register .action-primary:active, .financial-assistance-wrapper .financial-assistance-form .action-primary:active, .verification-process .action-primary-blue:active, .verification-process .carousel .wrapper-task .controls .control .action:active, .verification-process .carousel .wrapper-task .controls .control .entitlement-actions-wrapper .entitlement-action:active, .entitlement-actions-wrapper .verification-process .carousel .wrapper-task .controls .control .entitlement-action:active, .verification-process .carousel .wrapper-task .msg .list-actions .action-retakephotos a:active, .verification-process .carousel #wrapper-review .review-task-name .list-actions .action-editname a:active, .verification-process.step-select-track .register-choice-audit .action-select input:active, .verification-process.step-confirmation .course-info .options .action-course:active, .verification-process.step-confirmation .course-info .course-actions .action-dashboard:active, .reverify-blocked .action-primary:active, .wrapper-authorize .btn-authorization-allow:active, .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn:active, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .btn-change-privacy:active, .btn-blue:focus, .account-settings-sections .section .account-deletion-details .paragon__modal-open .paragon__btn:focus:not(.cancel-btn), .account-settings-message .alert-message .alert-actions .btn-alert-primary:focus, .login-register .action-primary:focus, .financial-assistance-wrapper .financial-assistance-form .action-primary:focus, .verification-process .action-primary-blue:focus, .verification-process .carousel .wrapper-task .controls .control .action:focus, .verification-process .carousel .wrapper-task .controls .control .entitlement-actions-wrapper .entitlement-action:focus, .entitlement-actions-wrapper .verification-process .carousel .wrapper-task .controls .control .entitlement-action:focus, .verification-process .carousel .wrapper-task .msg .list-actions .action-retakephotos a:focus, .verification-process .carousel #wrapper-review .review-task-name .list-actions .action-editname a:focus, .verification-process.step-select-track .register-choice-audit .action-select input:focus, .verification-process.step-confirmation .course-info .options .action-course:focus, .verification-process.step-confirmation .course-info .course-actions .action-dashboard:focus, .reverify-blocked .action-primary:focus, .wrapper-authorize .btn-authorization-allow:focus, .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn:focus, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .btn-change-privacy{
+  background: $primary !important;
+}
+
+.login-register .section-title, .financial-assistance-wrapper .financial-assistance-form .section-title{
+  color: $primary;
+}
+
+.global-header .nav-links .secondary a.register-btn,.global-header .nav-links .secondary a.sign-in-btn {
+  border-radius: $border-radius !important;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:not(:disabled){
+  background-image: none;
+  border: none;
+  text-shadow: none;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
+  background-image: none;
+  background-color: #df6514;
+}
+
+.empty-dashboard-message {
+  width: 50vw;
+}
